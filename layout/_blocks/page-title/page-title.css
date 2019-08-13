@@ -1,0 +1,14 @@
+.page-title {
+    font-family: "Nikaia", "Arial", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #e6e3bb;
+    letter-spacing: -2.4px;
+    text-transform: capitalize;
+    max-width: 557px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 38px;
+    margin-bottom: 31px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+}

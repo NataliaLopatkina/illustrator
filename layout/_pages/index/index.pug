@@ -1,0 +1,141 @@
+extends ../../_blocks/template/template.pug
+
+block data
+
+    -
+        var data = {
+            nav: {
+                activeElement: "Home",
+            },
+        }
+
+block content
+    div(class="banner")
+        div(class="banner__content banner--indent")
+            img(class="banner__img" src="images/banner/banner.png" srcset="images/banner/banner@2x.png 2x" alt="Banner")
+
+    div(class="features")
+        div(class="features__controls")
+            a(class="features__arrow features__arrow--prev" href="#5")
+            span(class="features__controls-text") Featured Title
+            a(class="features__arrow features__arrow--next" href="#5")
+        div(class="features__list")
+            include ../../_blocks/feature/feature.pug
+            
+            +feature(item)
+            +feature(item)
+            +feature(item)
+    div(class="separator")
+    div(class="services")
+        div(class="services__list")
+            include ../../_blocks/service/service.pug
+
+            -
+                var services = [
+                    {
+                        image: "book",
+                        title: "Research",
+                        text: "Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.",
+                        link: "learn more",
+                    },
+
+                    {
+                        image: "settings",
+                        title: "Work",
+                        text: "Justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum. Nam tincidunt.",
+                        link: "learn more",
+                    },
+
+                    {
+                        image: "calendar",
+                        title: "Deliver",
+                        text: "Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.",
+                        link: "learn more",
+                    },
+                ]
+
+            each item in services
+                +service(item)
+
+    div(class="tabs")
+        div(class="tabs__actions")
+            button(class="tabs__button active" type="button" data-tab="tab-1") Latest Press
+            button(class="tabs__button" type="button" data-tab="tab-2") Testimonials
+            button(class="tabs__button" type="button" data-tab="tab-3") Blog Posts
+        div(class="tabs__content")
+            div(class="tab-content active" data-content="tab-1")
+                div(class="reviews")
+                    div(class="reviews__content")
+                        include ../../_blocks/reviews-list/reviews-list.pug
+                        include ../../_blocks/reviews-list/reviews-list.pug
+                        include ../../_blocks/reviews-list/reviews-list.pug
+
+                    a(class="reviews__control reviews__control--prev")
+                    a(class="reviews__control reviews__control--next")
+
+            div(class="tab-content" data-content="tab-2")
+                section(class="reviews-list reviews-list--testimonials")
+                    h3(class="visually-hidden") Reviews list
+                    include ../../_blocks/post/post.pug
+                    - 
+                        var reviews = [
+                            {
+                                image: "message",
+                                title: "FreelanceSwitch",
+                                descriptionText: "Eleifend ni Huthy - 5/20/2011",
+                                text: "Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend.",
+                            },
+
+                            {
+                                image: "movie",
+                                title: "Gizmodo",
+                                descriptionText: "Eleifend ni Huthy - 5/3/2011",
+                                text: "Pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu",
+                            },
+
+                            {
+                                image: "message",
+                                title: "Mashable",
+                                descriptionText: "Eleifend ni Huthy - 4/20/2011",
+                                text: "Justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend mi ornare lectus or.",
+                            },
+                        ]
+
+                    each item in reviews
+                        +post(item)(class="post--review")
+
+            div(class="tab-content" data-content="tab-3")
+                section(class="reviews-list reviews-list--testimonials")
+                    h3(class="visually-hidden") Reviews list
+                    include ../../_blocks/post/post.pug
+                    - 
+                        var reviews = [
+                            {
+                                image: "message",
+                                title: "Gizmodo",
+                                descriptionText: "Eleifend ni Huthy - 5/20/2011",
+                                text: "Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend.",
+                            },
+
+                            {
+                                image: "movie",
+                                title: "Mashable",
+                                descriptionText: "Eleifend ni Huthy - 5/3/2011",
+                                text: "Pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu",
+                            },
+
+                            {
+                                image: "message",
+                                title: "FreelanceSwitch",
+                                descriptionText: "Eleifend ni Huthy - 4/20/2011",
+                                text: "Justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend mi ornare lectus or.",
+                            },
+                        ]
+
+                    each item in reviews
+                        +post(item)(class="post--review")
+
+    div(class="separator separator--small")
+
+    include ../../_blocks/newsletter/newsletter.pug
+

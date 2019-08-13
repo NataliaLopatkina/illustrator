@@ -1,0 +1,21 @@
+block data 
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="initial-scale=1.0, width=device-width")
+        title Illustartor
+        link(rel="stylesheet" href="stylesheets/common.css")
+        link(href="//db.onlinewebfonts.com/c/561d1a2c9cda5f8f79579581ae304ae6?family=Nikaia" rel="stylesheet" type="text/css")
+
+    body
+        include ../../_blocks/header/header.pug
+
+        main(class="main")
+            div(class="box")
+                block content
+
+        include ../../_blocks/footer/footer.pug 
+
+        script(src="scripts/common.js")

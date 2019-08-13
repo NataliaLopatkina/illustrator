@@ -1,0 +1,42 @@
+@import "../footer-breadcrumbs/footer-breadcrumbs.css";
+
+.copyright {
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 22px;
+        background-color: #242729;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.46), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+        border-radius: 0 0 8px 8px;
+        box-sizing: border-box;
+    }
+
+    &__text {
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        color: #725142;
+    }
+
+    &__link {
+        color: #725142;
+        transition: color 0.25s ease;
+
+        &:hover {
+            color: #e6e3bb;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .copyright {
+        &__content {
+            flex-direction: column;
+        }
+
+        &__text {
+            margin-bottom: 10px;
+        }
+    }
+}

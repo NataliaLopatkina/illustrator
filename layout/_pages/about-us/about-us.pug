@@ -1,0 +1,217 @@
+extends ../../_blocks/template/template.pug
+
+block data
+
+    -
+        var data = {
+            nav: {
+                activeElement: "About",
+            },
+        }
+
+block content
+    h1(class="page-title") We Create Award-Winning Brand Experiences
+    div(class="about-us")
+        div(class="breadcrumbs about-us__breadcrumbs")
+            ul(class="breadcrumbs__list")
+                li(class="breadcrumbs__item")
+                    a(href="#5" class="breadcrumbs__link") Home
+                li(class="breadcrumbs__item")
+                    a(href="#5" class="breadcrumbs__link breadcrumbs__link--active") About
+
+        div(class="mission about-us__mission")
+            include ../../_blocks/post/post.pug
+
+            -
+                var mission = [
+                    {
+                        image: "message",
+                        title: "Our mission",
+                        descriptionText: "Eleifend ni Huthy",
+                        date: "5/20/2011",
+                        text: "Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend. Maecenas ullamcorper tempor purus id mattis. Curabitur pellentesque, ante nec posuere lobortis, diam nulla sagittis lorem, semper viverra lorem erat at ipsum.",
+                        moreText: "Nullam non turpis dui. Sed erat tellus, porttitor a porttitor ut, adipiscing non dui. Nunc hendrerit, metus non tempor euismod, elit velit blandit felis, eu imperdiet lectus tortor at orci.lacinia dignissim arcu hendrerit.",
+                    }
+                ]
+
+            each item in mission
+                +post(item)(class="post--mission")
+
+            a(href="#5" class="button mission__link-more") Read more
+
+        div(class="video about-us__video")
+            div(class="video__content")
+                video(class="video__link")
+                    source(src="#5")
+
+                button(class="video__button-play" type="button")
+                    img(class="video__img-play" src="images/icons/play.png" alt="Play")
+
+            include ../../_blocks/post/post.pug
+
+            -
+                var video = [
+                    {
+                        image: "movie",
+                        title: "Krili havtret hyo gustripast",
+                        descriptionText: "Krili havtret hyo gustripast",
+                        text: "Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum. Proin ut erat quis nulla",
+                    }
+                ]
+
+            each item in video
+                +post(item)(class="post--video")
+
+        div(class="post-list")
+            include ../../_blocks/post/post.pug
+
+            -
+                var postList = [
+                    {
+                        image: "message",
+                        title: "Gizmodo",
+                        descriptionText: "Eleifend ni Huthy",
+                        date: "5/20/2011",
+                        text: "Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend.",
+                    },
+                    
+                    {
+                        image: "message",
+                        title: "Gizmodo",
+                        descriptionText: "Eleifend ni Huthy",
+                        date: "5/20/2011",
+                        text: "Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend.",
+                    },
+
+                    {
+                        image: "message",
+                        title: "Gizmodo",
+                        descriptionText: "Eleifend ni Huthy",
+                        date: "5/20/2011",
+                        text: "Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend.",
+                    },
+
+                    {
+                        image: "message",
+                        title: "Gizmodo",
+                        descriptionText: "Eleifend ni Huthy",
+                        date: "5/20/2011",
+                        text: "Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend.",
+                    },
+                ]
+
+            each item in postList
+                +post(item)(class="post--about-us")
+
+    div(class="separator")
+    div(class="services")
+        div(class="services__list")
+            include ../../_blocks/service/service.pug
+
+            -
+                var services = [
+                    {
+                        image: "book",
+                        title: "Research",
+                        text: "Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.",
+                        link: "learn more",
+                    },
+
+                    {
+                        image: "settings",
+                        title: "Work",
+                        text: "Justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum. Nam tincidunt.",
+                        link: "learn more",
+                    },
+
+                    {
+                        image: "calendar",
+                        title: "Deliver",
+                        text: "Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.",
+                        link: "learn more",
+                    },
+                ]
+
+            each item in services
+                +service(item)
+    div(class="tabs")
+        div(class="tabs__actions")
+            button(class="tabs__button active" type="button" data-tab="tab-1") Latest Press
+            button(class="tabs__button" type="button" data-tab="tab-2") Testimonials
+            button(class="tabs__button" type="button" data-tab="tab-3") Blog Posts
+        div(class="tabs__content")
+            div(class="tab-content active" data-content="tab-1")
+                div(class="reviews")
+                    div(class="reviews__content")
+                        include ../../_blocks/reviews-list/reviews-list.pug
+                        include ../../_blocks/reviews-list/reviews-list.pug
+                        include ../../_blocks/reviews-list/reviews-list.pug
+
+                    a(class="reviews__control reviews__control--prev")
+                    a(class="reviews__control reviews__control--next")
+
+            div(class="tab-content" data-content="tab-2")
+                section(class="reviews-list reviews-list--testimonials")
+                    h3(class="visually-hidden") Reviews list
+                    include ../../_blocks/post/post.pug
+                    - 
+                        var reviews = [
+                            {
+                                image: "message",
+                                title: "FreelanceSwitch",
+                                descriptionText: "Eleifend ni Huthy - 5/20/2011",
+                                text: "Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend.",
+                            },
+
+                            {
+                                image: "movie",
+                                title: "Gizmodo",
+                                descriptionText: "Eleifend ni Huthy - 5/3/2011",
+                                text: "Pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu",
+                            },
+
+                            {
+                                image: "message",
+                                title: "Mashable",
+                                descriptionText: "Eleifend ni Huthy - 4/20/2011",
+                                text: "Justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend mi ornare lectus or.",
+                            },
+                        ]
+
+                    each item in reviews
+                        +post(item)(class="post--review")
+
+            div(class="tab-content" data-content="tab-3")
+                section(class="reviews-list reviews-list--testimonials")
+                    h3(class="visually-hidden") Reviews list
+                    include ../../_blocks/post/post.pug
+                    - 
+                        var reviews = [
+                            {
+                                image: "message",
+                                title: "Gizmodo",
+                                descriptionText: "Eleifend ni Huthy - 5/20/2011",
+                                text: "Donec pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend.",
+                            },
+
+                            {
+                                image: "movie",
+                                title: "Mashable",
+                                descriptionText: "Eleifend ni Huthy - 5/3/2011",
+                                text: "Pellentesque, justo eget imperdiet viverra,lectus mi ornare arcu",
+                            },
+
+                            {
+                                image: "message",
+                                title: "FreelanceSwitch",
+                                descriptionText: "Eleifend ni Huthy - 4/20/2011",
+                                text: "Justo eget imperdiet viverra,lectus mi ornare arcu, non laoreet lacus lacus eleifend mi ornare lectus or.",
+                            },
+                        ]
+
+                    each item in reviews
+                        +post(item)(class="post--review")
+
+    div(class="separator separator--small")
+
+    include ../../_blocks/newsletter/newsletter.pug

@@ -1,0 +1,23 @@
+mixin feature(item)
+    div(class="feature")
+        ul(class="feature__image-list")
+            li(class="feature__image-item")
+                img(class="feature__img" src="images/features/feature-1.jpg" alt="Feature 1")
+            li(class="feature__image-item")
+                img(class="feature__img" src="images/features/feature-2.jpg" alt="Feature 2")
+            li(class="feature__image-item")
+                img(class="feature__img" src="images/features/feature-3.jpg" alt="Feature 3")
+
+        include ../../_blocks/post/post.pug
+        -
+            var features = [
+                {
+                    image: "feature",
+                    title: "Krili havtret hyo gustripast",
+                    descriptionText: "Krili havtret hyo gustripast",
+                    text: "Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum. Proin ut erat quis nulla tempor imperdiet ac et lorem.",
+                }
+            ]
+
+        each item in features
+            +post(item)(class="post--feature")

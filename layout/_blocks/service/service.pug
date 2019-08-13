@@ -1,0 +1,8 @@
+mixin service(item)
+    div(class="service")
+        div(class="service__image-content")
+            div(class="service__image-border")
+                img(class="service__image" src="images/icons/" + item.image + ".png" alt="Service")
+        p(class="title service__title") !{item.title}
+        p(class="service__text") !{item.text}
+        a(href="#5" class="service__link") !{item.link}

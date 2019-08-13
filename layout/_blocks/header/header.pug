@@ -1,0 +1,17 @@
+header(class="header box")
+    div(class="header__content")
+        div(class="header__actions")
+            div(class="logo header__logo")
+                a(class="logo__text" href="index.html") _1981_
+
+            button(class="header__button header__button--opened" type="button")
+                span(class="header__button-text") Открыть меню
+
+        include ../../_blocks/nav/nav.pug
+        +nav(activeElement)
+
+        div(class="header__user")
+            span(class="header__welcome") Welcome Back, 
+            span(class="header__user-name") JohnDoe81
+
+        button(class="button header__entry") Client Sign-Out

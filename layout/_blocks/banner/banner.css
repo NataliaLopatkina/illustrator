@@ -1,0 +1,28 @@
+.banner {
+    &--indent {
+        margin-top: -34px;
+        margin-bottom: -95px;
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 992px) {
+    .banner {
+        &__img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        &--indent {
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+    }
+}

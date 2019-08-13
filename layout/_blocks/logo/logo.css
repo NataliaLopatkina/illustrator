@@ -1,0 +1,30 @@
+.logo {
+    position: relative;
+    display: inline-block;
+
+    &__text {
+        font-family: "Nikaia";
+        font-size: 30px;
+        font-weight: 400;
+        line-height: calc(48/30);
+        color: #e6e3bb;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        background: #7b7a6d;
+        height: 34px;
+        right: -19px;
+        top: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        &:after {
+            display: none;
+        }
+    }
+}

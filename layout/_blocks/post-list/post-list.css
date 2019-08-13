@@ -1,0 +1,16 @@
+.post-list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 34px;
+    margin-right: 34px;
+    border-top: 1px solid #41403a;
+    padding-top: 30px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .post-list {
+        flex-wrap: wrap;
+        margin: auto;
+    }
+}

@@ -1,0 +1,49 @@
+.flickr {
+    width: 288px;
+    
+    &__list {
+        list-style: none;
+        display: flex;
+        max-width: 288px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: -5px;
+        overflow: hidden;
+    }
+
+    &__item {
+        width: 62px;
+        height: 62px;
+        background: #242729;
+        position: relative;
+        margin: 5px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border: 5px solid #8e4423;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
+    }
+
+    &__title {
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .flickr {
+        &__list {
+            margin: 0;
+        }
+    }
+}

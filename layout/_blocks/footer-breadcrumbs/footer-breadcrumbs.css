@@ -1,0 +1,34 @@
+.footer-breadcrumbs {
+    &__list {
+        list-style: none;
+        display: flex;
+        width: 260px;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "/";
+            font-size: 12px;
+            letter-spacing: 0.3px;
+            color: #725142;
+            top: 5px;
+            right: -20px;
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        color: #725142;
+    }
+}

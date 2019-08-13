@@ -1,0 +1,35 @@
+@import "../service/service.css";
+
+.services {
+    overflow: hidden;
+    background: #e6e3bb;
+    position: relative;
+    z-index: 1001;
+
+    &__list {
+        display: flex;
+        margin: -60px auto;
+        margin-top: 0;
+        padding-bottom: 43px;
+    }
+}
+
+@media (max-width: 992px) {
+    .services {
+        &__list {
+            margin: -10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .services {
+        &__list {
+            flex-direction: column;
+            margin-top: 0;
+        }
+    }
+}

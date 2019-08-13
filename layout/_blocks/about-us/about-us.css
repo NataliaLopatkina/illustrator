@@ -1,0 +1,42 @@
+@import "../breadcrumbs/breadcrumbs.css";
+@import "../mission/mission.css";
+@import "../video/video.css";
+@import "../post-list/post-list.css";
+
+.about-us {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.46), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    background-color: #242729;
+    border-radius: 8px 8px 0 0;
+    padding: 11px 10px 45px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__breadcrumbs {
+        margin-bottom: 19px;
+    }
+
+    &__mission {
+        margin-left: 33px;
+        margin-bottom: 20px;
+    }
+
+    &__video {
+        margin-right: 34px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-us__video {
+        width: 300px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us__video {
+        max-width: 416px;
+        width: 100%;
+    }
+}

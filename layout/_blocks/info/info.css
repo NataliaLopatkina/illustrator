@@ -1,0 +1,21 @@
+.info {
+    display: flex;
+    align-items: center;
+
+    &__image-block {
+        margin-right: 13px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #8e4423;
+    }
+
+    &__description {
+        font-size: 12px;
+        font-style: italic;
+        letter-spacing: 0.12px;
+        color: #646363;;
+    }
+}

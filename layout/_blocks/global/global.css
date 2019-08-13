@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Myriad Pro";
+    src: url("../../fonts/MyriadPro/MyriadPro-Regular.woff2") format("woff2"),
+        url("../../fonts/MyriadPro/MyriadPro-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url("../../fonts/MyriadPro/MyriadPro-Semibold.woff2") format("woff2"),
+        url("../../fonts/MyriadPro/MyriadPro-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url("../../fonts/MyriadPro/MyriadPro-It.woff2") format("woff2"),
+        url("../../fonts/MyriadPro/MyriadPro-It.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Titillium";
+    src: url("../../fonts/Titillium/Titillium-RegularItalic.woff2") format("woff2"),
+        url("../../fonts/Titillium/Titillium-RegularItalic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+body {
+    font-family: "Myriad Pro", "Arial", sans-serif;
+    font-weight: 400;
+    background: url("../images/background/background.jpg");
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}

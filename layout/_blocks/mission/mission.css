@@ -1,0 +1,25 @@
+.mission {
+    max-width: 405px;
+    box-sizing: border-box;
+
+    &__link-more {
+        font-size: 14px;
+        color: #e6e3bb;
+        text-transform: lowercase;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.56);
+        padding: 7px 14px 7px 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .mission {
+        max-width: 350px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .mission {
+        max-width: 100%;
+    }
+}

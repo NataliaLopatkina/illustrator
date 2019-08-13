@@ -1,0 +1,62 @@
+@import "../visually-hidden/visually-hidden.css";
+@import "../reviews-list/reviews-list.css";
+
+.reviews {
+    background: #e6e3bb;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+        display: flex;
+    }
+
+    &__control {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.43), 0 0 5px rgba(0, 0, 0, 0.49);
+        border: 1px solid #622f18;
+        background-color: #924b2a;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.27) 0%, rgba(255, 255, 255, 0.27) 100%);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        margin-top: -17px;
+
+        &:before {
+            position: absolute;
+            content: url("../images/svg/arrow-prev.svg");
+            top: 50%;
+            left: 50%;
+            margin-top: -8px;
+            margin-left: -5px;
+        }
+        
+        &--prev {
+            left: 40px;
+        }
+
+        &--next {
+            right: 40px;
+
+            &:before {
+                transform: rotate(180deg);
+                margin-top: -12px;
+                
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .reviews {
+        &__control--prev {
+            left: 0;
+        }
+
+        &__control--next {
+             right: 0;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.pages {
+    width: 138px;
+
+    &__title {
+        margin-bottom: 14px;
+    }
+    
+    &__list {
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        margin-bottom: 13px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__name {
+        font-size: 14px;
+        color: #4f504b;
+        transition: color 0.25s ease;
+
+        &:hover {
+            color:#8e4423; 
+        }
+    }
+}

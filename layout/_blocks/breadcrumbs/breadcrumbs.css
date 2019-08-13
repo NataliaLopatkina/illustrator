@@ -1,0 +1,41 @@
+.breadcrumbs {
+    border-bottom: 1px solid #393b3d;
+    padding-bottom: 10px;
+    width: 100%;
+
+    &__list {
+        list-style: none;
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 30px;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "\2192";
+            color: #7b7a6d;
+            right: -20px;
+            top: 1px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 13px;
+        color: #7b7a6d;
+        text-transform: lowercase;
+
+        &--active {
+            color: #8e4423;
+        }
+    }
+}

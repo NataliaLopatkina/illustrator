@@ -1,0 +1,53 @@
+@import "../flickr/flickr.css";
+@import "../clients/clients.css";
+@import "../partners/partners.css";
+@import "../pages/pages.css";
+@import "../copyright/copyright.css";
+
+.footer {
+    margin-bottom: 305px;
+    
+    &__content {
+        background: #e6e3bb;
+        padding: 31px 20px 38px;
+        box-sizing: border-box;
+    }
+
+    &__list {
+        display: flex;
+        margin: -21px;
+        overflow: hidden;
+    }
+
+    &__item {
+        margin: 21px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        margin-bottom: 50px;
+        
+        &__list {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        &__content {
+            padding: 20px 0;
+        }
+
+        &__list {
+            margin: 0;
+        }
+
+        &__item {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    }
+}

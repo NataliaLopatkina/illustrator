@@ -1,0 +1,22 @@
+@import "../../_blocks/normalize/normalize.css";
+@import "../../_blocks/reset/reset.css";
+
+/*! Styles */
+
+@import "../../_blocks/variables/variables.css";
+@import "../../_blocks/global/global.css";
+@import "../../_blocks/box/box.css";
+@import "../../_blocks/header/header.css";
+@import "../../_blocks/banner/banner.css";
+@import "../../_blocks/features/features.css";
+@import "../../_blocks/services/services.css";
+@import "../../_blocks/tabs/tabs.css";
+@import "../../_blocks/reviews/reviews.css";
+@import "../../_blocks/separator/separator.css";
+@import "../../_blocks/newsletter/newsletter.css";
+@import "../../_blocks/footer/footer.css";
+
+/* Page About us */
+
+@import "../../_blocks/page-title/page-title.css";
+@import "../../_blocks/about-us/about-us.css";
